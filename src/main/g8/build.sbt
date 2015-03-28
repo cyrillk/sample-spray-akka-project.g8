@@ -23,7 +23,7 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-testkit" % akkaV % "test",
     // TESTING
     "org.scalacheck" %% "scalacheck" % "1.12.2" % "test",
-    "org.specs2" %% "specs2-core" % "3.1" % "test",
+    "org.specs2" %% "specs2-core" % "3.2" % "test",
     "org.mockito" % "mockito-core" % "1.10.19" % "test"
   )
 }
@@ -35,4 +35,3 @@ Revolver.settings
 scalacOptions in Test ++= Seq("-Yrangepos") // specs2
 
 initialCommands := "import $organization$.$name;format="lower,word"$._"
-
