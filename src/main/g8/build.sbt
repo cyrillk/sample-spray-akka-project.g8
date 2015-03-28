@@ -6,9 +6,11 @@ version := "$version$"
 
 scalaVersion := "2.11.6"
 
+scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
+
 libraryDependencies ++= {
   val akkaV = "2.3.9"
-  val sprayV = "1.3.1"
+  val sprayV = "1.3.3"
   Seq(
     "org.scalaz" %% "scalaz-core" % "7.1.1" withSources() withJavadoc(),
     // SPRAY
@@ -28,19 +30,9 @@ libraryDependencies ++= {
 
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
 
-scalacOptions ++= Seq(
-  "-unchecked",
-  "-deprecation",
-  "-Xlint",
-  "-Ywarn-dead-code",
-  "-language:_",
-  "-target:jvm-1.7",
-  "-encoding", "UTF-8"
-)
+Revolver.settings
 
-// scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
-
-scalacOptions in Test ++= Seq("-Yrangepos")
+scalacOptions in Test ++= Seq("-Yrangepos") // specs2
 
 initialCommands := "import $organization$.$name;format="lower,word"$._"
 
