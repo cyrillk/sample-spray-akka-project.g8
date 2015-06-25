@@ -4,7 +4,7 @@ organization := "$organization$"
 
 version := "$version$"
 
-scalaVersion := "2.11.6"
+scalaVersion := "2.11.7"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
@@ -12,7 +12,7 @@ libraryDependencies ++= {
   val akkaV = "2.3.9"
   val sprayV = "1.3.3"
   Seq(
-    "org.scalaz" %% "scalaz-core" % "7.1.1" withSources() withJavadoc(),
+    "org.scalaz" %% "scalaz-core" % "7.1.3" withSources() withJavadoc(),
     // SPRAY
     "io.spray" %% "spray-can" % sprayV,
     "io.spray" %% "spray-routing" % sprayV,
